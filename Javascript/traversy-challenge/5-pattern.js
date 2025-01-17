@@ -8,9 +8,8 @@
 
 */
 
-let str = "";
-
-function rectangle(length) {
+function rectanglePattern(length) {
+  let str = "";
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
       str = str + "*";
@@ -21,7 +20,7 @@ function rectangle(length) {
   console.log(str);
 }
 
-rectangle(5);
+rectanglePattern(5);
 
 /*
 
@@ -32,3 +31,75 @@ rectangle(5);
 *****
 
 */
+
+function leftUpTrainglePattern(length) {
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    for (let j = 0; j < i; j++) {
+      str = str + "*";
+    }
+    str = str + "\n";
+  }
+
+  console.log(str);
+}
+
+leftUpTrainglePattern(6);
+
+/*
+
+    *
+   **
+  ***
+ ****
+*****
+
+*/
+
+function rightUpTrainglePattern(length) {
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    for (let j = 0; j < length - i; j++) {
+      str += " ";
+    }
+
+    for (let k = 0; k <= i; k++) {
+      str += "*";
+    }
+    str += "\n";
+  }
+
+  console.log(str);
+}
+
+rightUpTrainglePattern(6);
+
+/*
+
+******
+ *****
+  ****
+   ***
+    **
+     *
+
+*/
+
+function rightBottomTrainglePattern(length) {
+  let str = "";
+  for (let i = length; i >= 0; i--) {
+    for (let j = 0; j < length - i; j++) {
+      str += " ";
+    }
+
+    for (let k = 0; k <= i; k++) {
+      str += "*";
+    }
+
+    str += "\n";
+  }
+
+  console.log(str);
+}
+
+rightBottomTrainglePattern(6);
