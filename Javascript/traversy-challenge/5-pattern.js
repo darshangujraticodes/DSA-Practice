@@ -103,3 +103,28 @@ function rightBottomTrainglePattern(length) {
 }
 
 rightBottomTrainglePattern(6);
+
+/*
+
+******
+*****
+****
+***
+**
+*
+
+*/
+
+function leftBottomTrianglePattern(count) {
+  let str = "";
+  for (let i = count; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      str += "*";
+    }
+    str += "\n";
+  }
+
+  console.log(str);
+}
+
+leftBottomTrianglePattern(5);
