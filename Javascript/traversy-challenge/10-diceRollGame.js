@@ -2,6 +2,9 @@ function diceGame() {
   let dice1Val = Math.floor(Math.random() * (6 - 1 + 1) + 1);
   let dice2Val = Math.floor(Math.random() * (6 - 1 + 1) + 1);
 
+  // to get between range values formula
+  //   Math.floor( Math.random() * (max - min + 1) + min )
+
   let diceSum = dice1Val + dice2Val;
 
   if (diceSum === 7 || diceSum === 11) {
