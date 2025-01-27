@@ -6,7 +6,6 @@ const products = [
 
 function calculateTotalSalesWithTax(productsArray, taxAmount) {
   let temp;
-
   let sum = 0;
   for (k of productsArray) {
     temp = k.price * k.quantity;
