@@ -53,6 +53,16 @@ console.log(
 
 // sort
 
-console.log(numberData.sort());
+let jumbleArray = [1, 5, 8, 7, 9, 4, 2, 6, 3];
+
+console.log(
+  "Ascending Order = ",
+  jumbleArray.sort((a, b) => a - b)
+);
+
+console.log(
+  "Descending Order = ",
+  jumbleArray.sort((a, b) => b - a)
+);
 
 //
