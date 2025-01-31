@@ -1,4 +1,4 @@
-package pattern;
+
 public class Pattern2 {
 
     public void showTrainglePattern(){
