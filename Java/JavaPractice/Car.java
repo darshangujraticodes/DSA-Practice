@@ -10,8 +10,8 @@ package Java.JavaPractice;
  * Encapsulation -> bundling of data and methods into single unit and hiding them and preventing them to edit or update from external source
  *                  it can only fetch and update using getter & setter methods  
  * Polymorphism  -> 
- * Abstraction   -> 
- * 
+ * Abstraction   -> hiding implementation details
+ * inheritance   -> 
  * 
  */
 
