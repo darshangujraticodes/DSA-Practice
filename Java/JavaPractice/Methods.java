@@ -1,6 +1,7 @@
 
 package Java.JavaPractice;
 
+
 public class Methods {
 
     // primitive data type
@@ -63,8 +64,66 @@ public class Methods {
          * 
          */
 
-        // value data equal check 
 
+
+    }
+
+    public void arrayType(){
+
+
+        // 2 format syntax
+
+        // collection of similar types of data is called array
+        // type 1
+        int[] array = {1,5,8,6,8,9,6};
+
+        // type 2
+        // note new help to store data in heap memory
+        int[] array2 = new int[5];
+        array2[2] = 5;
+        array2[3] = 9;
+        array2[1] = 44;
+
+        // for(int num : array){
+        //     System.out.println(num);
+        // }
+
+        // 2 dimensional Array
+
+        int[][] squareMatrix = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9},
+        };
+        for(int i =0; i< squareMatrix.length; i++){
+            for(int j =0; j< squareMatrix.length ; j++){
+                System.out.print(squareMatrix[i][j]);
+                // System.out.print( "i = "+i+" J = "+j+" "+matrix[i][j]);
+            }
+            System.out.println();
+        }
+
+
+        // jagged array : Array of different row and column
+
+        // type 1
+        int[][] jaggedArray = new int[3][];
+
+        int[][] jagArray = {
+            {1,2},
+        {3,4},
+        {5,6},
+        {7,8}
+        };
+
+        System.out.println("Jagged Array Data Traverse");
+
+        for(int i = 0 ; i < jagArray.length; i++){
+            for(int j =0; j< jagArray[i].length; j++){
+                System.out.print(jagArray[i][j]);
+            }
+            System.out.println();
+        }
 
 
     }
@@ -102,7 +161,14 @@ public class Methods {
         m.stringMethods();
 
 
+        // array
+
+        m.arrayType();
+
+
     }
+
+
 
     
 
