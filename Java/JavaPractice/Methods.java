@@ -125,6 +125,17 @@ public class Methods {
             System.out.println();
         }
 
+        // enhance for loop
+
+        System.out.println("Enhance for loop");
+
+        for(int[] i : jagArray){
+            for(int j : i){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
 
     }
 
