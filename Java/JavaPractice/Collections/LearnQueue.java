@@ -15,7 +15,10 @@ public class LearnQueue {
 
         System.out.println(apiUserRequest);
 
-        apiUserRequest.
+        apiUserRequest.poll();
+        System.out.println(apiUserRequest);
+
+        System.out.println(apiUserRequest.peek());
 
     }
 
