@@ -9,7 +9,7 @@ public class LearnStack {
         Stack<String> bookStack = new Stack<>();
 
         // push
-        bookStack.push("Physiscs");
+        bookStack.push("Physics");
         bookStack.push("Chemistry");
         bookStack.push("Algebra");
         bookStack.push("Geometry");
@@ -25,6 +25,17 @@ public class LearnStack {
         System.out.println("isEmpty() = " + bookStack.isEmpty());
 
         System.out.println("peek() = " + bookStack.peek());
+
+        bookStack.size();
+
+        System.out.println("size() = " + bookStack.size());
+
+        // search return index value from top to bottom count approach
+        System.out.println("search('Chemistry') = " + bookStack.search("Chemistry"));
+
+        for (String i : bookStack) {
+            System.out.println(i);
+        }
 
     }
 
