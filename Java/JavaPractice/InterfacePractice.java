@@ -1,5 +1,4 @@
 
-
 /* 
  *  abstract class  -> interface
  *  extends -> implements
@@ -30,9 +29,9 @@
  * 
  */
 
-interface Computer{
+interface Computer {
 
-    // by default 
+    // by default
     String brandName = "HP";
     String brandModel = "i5 - HP15-96G";
 
@@ -41,54 +40,50 @@ interface Computer{
 }
 
 // interface inherit other interface property and methods
-interface AcerLaptop extends Computer{
+interface AcerLaptop extends Computer {
 
     String brandName = "ACER";
     String brandModel = "i5 - A315-53G";
 
-    void pcInfo( );
+    void pcInfo();
 }
 
-interface Mobile{
+interface Mobile {
     void communicationTool();
 }
 
-class Desktop implements Computer , Mobile{
-    public void workTool(){
+class Desktop implements Computer, Mobile {
+    public void workTool() {
         System.out.println("Alloted Work Tool : Desktop");
     }
 
-    public void communicationTool(){
+    public void communicationTool() {
         System.out.println("Alloted Communication Tool : Mobile");
     }
 }
 
-class Laptop implements  AcerLaptop{
-    public void workTool(){
-        System.out.println("Alloted Work Tool : Laptop" );
+class Laptop implements AcerLaptop {
+    public void workTool() {
+        System.out.println("Alloted Work Tool : Laptop");
 
     }
 
-  public void pcInfo(){
+    public void pcInfo() {
         System.out.println("LPINFO = ACER : i5 - A315-53G");
-  }
+    }
 }
 
-
 class Developer {
-    public void devApp(Computer obj){
+    public void devApp(Computer obj) {
         obj.workTool();
     }
 }
 
-
 public class InterfacePractice {
     public static void main(String[] args) {
-        
 
         Computer desk = new Desktop();
         Laptop lap = new Laptop();
-
 
         Developer ron = new Developer();
 
@@ -97,10 +92,9 @@ public class InterfacePractice {
         ron.devApp(lap);
         harry.devApp(desk);
 
-
         lap.pcInfo();
 
-        System.out.println(Computer.brandName + " "+ Computer.brandModel);
+        System.out.println(Computer.brandName + " " + Computer.brandModel);
 
     }
 }
