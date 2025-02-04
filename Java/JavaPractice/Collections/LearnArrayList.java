@@ -1,7 +1,9 @@
 package Java.JavaPractice.Collections;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 /*
  * 
@@ -79,7 +81,9 @@ public class LearnArrayList {
         // java ArrayList
         // note : we need to import util.Arraylist
 
-        ArrayList<String> studentsName = new ArrayList<>();
+        List<String> studentsName = new ArrayList<>();
+
+        List<String> list2 = new LinkedList<>();
 
         // arraylist methods
 
@@ -172,5 +176,16 @@ public class LearnArrayList {
             System.out.println(it.next());
         }
 
+        // cloning
+
+        ArrayList<String> list1 = new ArrayList<>();
+
+        list1.add("ab");
+        list1.add("cd");
+        list1.add("ef");
+
+        ArrayList<String> list3 = (ArrayList<String>) list1.clone();
+
+        System.out.println("clone() = " + list3);
     }
 }
