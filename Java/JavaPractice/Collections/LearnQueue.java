@@ -1,5 +1,6 @@
 package Java.JavaPractice.Collections;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
@@ -59,6 +60,10 @@ public class LearnQueue {
         for (Integer i : userMarks2) {
             System.out.println(i);
         }
+
+        Object[] arr = userMarks.toArray();
+
+        System.out.println("Queue to array = " + Arrays.toString(arr));
 
     }
 
