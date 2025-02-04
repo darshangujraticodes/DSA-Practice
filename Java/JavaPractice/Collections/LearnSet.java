@@ -1,6 +1,7 @@
 package Java.JavaPractice.Collections;
 
 import java.util.HashSet;
+import java.util.TreeSet;
 
 public class LearnSet {
     public static void main(String[] args) {
@@ -55,6 +56,20 @@ public class LearnSet {
          * 
          * 
          */
+
+        System.out.println("TreeSet()");
+
+        TreeSet<Integer> mark3 = new TreeSet<>();
+
+        mark3.add(85);
+        mark3.add(95);
+        mark3.add(25);
+        mark3.add(125);
+        mark3.add(45);
+
+        System.out.println(mark3 + " | " + mark3.size());
+
+        System.out.println("contains = " + mark3.contains(45));
 
     }
 
