@@ -40,7 +40,7 @@
  *
  * 
  * 
- * 
+ *  default methods are methods who has body statment 
  * 
  * 
  */
