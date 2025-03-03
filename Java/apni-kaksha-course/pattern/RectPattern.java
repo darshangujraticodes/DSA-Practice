@@ -238,6 +238,88 @@ class RectPattern{
 
     }
 
+    public static void diamondPattern(int length){
+        System.out.print("-----------------------------------------------------");
+
+        System.out.println("\n");
+
+        System.out.println("Diamond Pattern");
+        System.out.println();
+
+
+        /*   
+         *                  *
+         *                 ***
+         *                *****
+         *               *******
+         *              *********
+         *              *********
+         *               *******
+         *                *****
+         *                 ***
+         *                  *
+         *   
+         * 
+         * first half 
+         * row : 4
+         * column : 8 (4*2)
+         * 
+         * 
+         */
+
+
+
+         // 1st half
+         for(int i=1; i<= length ; i++){
+            
+          
+            // starting gap
+            for(int j=length - i; j > 0; j--){
+                System.out.print(" "); 
+            }
+
+            // print star
+            for(int j =1; j<= ((2*i) - 1); j++){
+                System.out.print("*");
+            }
+
+            // end gap
+            for(int j=length-i; j > 0; j--){
+                System.out.print(" ");
+              
+            }
+
+            System.out.println("");
+         }
+
+
+          // 2nd half
+         for(int i=length; i>0 ; i--){
+            
+          
+            // starting gap
+            for(int j=length - i; j > 0; j--){
+                System.out.print(" "); 
+            }
+
+            // print star
+            for(int j =1; j<= ((2*i) - 1); j++){
+                System.out.print("*");
+            }
+
+            // end gap
+            for(int j=length-i; j > 0; j--){
+                System.out.print(" ");
+              
+            }
+
+            System.out.println("");
+         }
+
+
+
+    }
+
 
     public static void main(String[] args ){
 
@@ -255,6 +337,8 @@ class RectPattern{
             binaryTriangle(8);
 
             butterflyPattern(4);
+
+            diamondPattern(4);
 
     }
 }
