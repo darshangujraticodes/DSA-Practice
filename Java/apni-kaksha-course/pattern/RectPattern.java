@@ -169,6 +169,75 @@ class RectPattern{
 
     }
 
+    public static void butterflyPattern(int length){
+        System.out.print("-----------------------------------------------------");
+
+        System.out.println("\n");
+
+        System.out.println("Butterfly Pattern");
+        System.out.println();
+
+
+        /*   
+         *   *      *
+         *   **    **
+         *   ***  ***
+         *   ********
+         *   ********
+         *   ***  ***
+         *   **    **
+         *   *      *
+         *   
+         * 
+         * first half 
+         * row : 4
+         * column : 8 (4*2)
+         * 
+         * 
+         */
+
+
+         // ist half
+   
+         for(int i = 1; i <= length ; i++){
+            
+            // star print
+            for(int j=1 ; j<= i; j++){
+                System.out.print("*");
+            }
+
+            // gap print
+            for(int j=1 ; j <= 2*(length-i) ; j++){
+                System.out.print(" ");
+            }
+
+            // star print
+            for(int j=1 ; j<= i; j++){
+                System.out.print("*");
+            }
+            System.out.println(""); 
+         }
+
+
+         // 2nd half
+       
+         for(int i = length; i > 0 ; i--){
+            for(int j=1 ; j<= i; j++){
+                System.out.print("*");
+            }
+            for(int j=1 ; j <= 2*(length-i) ; j++){
+                System.out.print(" ");
+            }
+            for(int j=1 ; j<= i; j++){
+                System.out.print("*");
+            }
+            System.out.println(""); 
+         }
+
+
+
+    }
+
 
     public static void main(String[] args ){
 
@@ -183,7 +252,9 @@ class RectPattern{
 
             floydTriangle(5);
 
-            binaryTriangle(6);
+            binaryTriangle(8);
+
+            butterflyPattern(4);
 
     }
 }
