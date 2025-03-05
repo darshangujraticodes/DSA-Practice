@@ -283,11 +283,7 @@ class RectPattern{
                 System.out.print("*");
             }
 
-            // end gap
-            for(int j=length-i; j > 0; j--){
-                System.out.print(" ");
-              
-            }
+          
 
             System.out.println("");
          }
@@ -307,16 +303,94 @@ class RectPattern{
                 System.out.print("*");
             }
 
-            // end gap
-            for(int j=length-i; j > 0; j--){
-                System.out.print(" ");
-              
-            }
+         
 
             System.out.println("");
          }
 
 
+
+    }
+
+    public static void numberPyramid(int length){
+        System.out.print("-----------------------------------------------------");
+
+        System.out.println("\n");
+
+        System.out.println("Number Pyramid Pattern");
+        System.out.println();
+
+
+        /*   
+         *                1
+         *               2 2
+         *              3 3 3
+         *             4 4 4 4 
+         *            5 5 5 5 5 
+         *           6 6 6 6 6 6
+         *   
+         */
+
+
+       
+
+         for(int i = 1; i <=length ; i++){
+
+            // gaps
+            for(int j = 1; j <= length-i; j++){
+                System.out.print(" ");
+            }
+
+            // print value
+            for(int j=1 ; j <= i; j++){
+                System.out.print(i+" ");
+            }
+            System.out.println("");
+        }
+
+    }
+
+    public static void numberPalindromeyramid(int length){
+        System.out.print("-----------------------------------------------------");
+
+        System.out.println("\n");
+
+        System.out.println("Number Pyramid Pattern");
+        System.out.println();
+
+
+        /*   
+         *
+         *          1
+         *        2 1 2
+         *      3 2 1 2 3 
+         *    4 3 2 1 2 3 4
+         *  5 4 3 2 1 2 3 4 5
+         * 
+         */
+
+
+         for(int i = 1; i <=length ; i++){
+
+            // gaps
+            for(int j = 1; j <= length-i; j++){
+                System.out.print(" ");
+            }
+
+            // print value
+            for(int j=i ; j >0; j--){
+                System.out.print(j);
+            }
+
+            if(i >= 2){
+                for(int j=2 ; j <=i ; j++){
+                    System.out.print(j);
+                }
+            }
+           
+            
+            System.out.println("");
+        }
 
     }
 
@@ -339,6 +413,10 @@ class RectPattern{
             butterflyPattern(4);
 
             diamondPattern(4);
+
+            numberPyramid(5);
+
+            numberPalindromeyramid(5);
 
     }
 }
