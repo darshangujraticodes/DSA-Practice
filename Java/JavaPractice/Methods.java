@@ -1,8 +1,21 @@
 
-package Java.JavaPractice;
+ 
+/*
+ * 
+ * enum is just like a classs it can have variable and methods
+ * but note it cannot be inherited in other class inheritance is not supported in enum
+ * 
+ * 
+ */
+
+enum ApiStatus{
+    Running, Failed, Pending, Success
+}
 
 
 public class Methods {
+
+   
 
     // primitive data type
     // byte, int, long(4546l), float(0.255f), double, boolean, char(single letter = r)  String
@@ -176,6 +189,20 @@ public class Methods {
 
         m.arrayType();
 
+
+        // enum -> eumeration
+
+        // collection of constant 
+
+        ApiStatus api = ApiStatus.Success;
+
+        System.out.println(api);
+
+        ApiStatus[] apiArrayVal = ApiStatus.values();
+    
+        for( ApiStatus s : apiArrayVal ){
+            System.out.println(s+" : "+s.ordinal());
+        }
 
     }
 

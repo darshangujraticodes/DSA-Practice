@@ -30,6 +30,19 @@
  * 
  */
 
+
+/*
+ * Interface of 3 types
+ * 
+ *  1] Normal -> 2 or more abstract method are call normal
+ *  2] Functional  -> single interface methods 
+ *  3] Marker -> Does not have anu methods 
+ * 
+ * 
+ */
+
+ // @ is used for annotation
+
 interface Computer{
 
     // by default 
@@ -38,6 +51,11 @@ interface Computer{
 
     // in absr
     void workTool();
+}
+
+@FunctionalInterface
+interface LambdaTest{
+    void lambdaMethod();
 }
 
 // interface inherit other interface property and methods
@@ -97,10 +115,15 @@ public class InterfacePractice {
         ron.devApp(lap);
         harry.devApp(desk);
 
-
         lap.pcInfo();
 
         System.out.println(Computer.brandName + " "+ Computer.brandModel);
+
+        // lambda expression
+
+        LambdaTest obj3 = () -> System.out.println("lambda function ");
+      
+        obj3.lambdaMethod();
 
     }
 }
