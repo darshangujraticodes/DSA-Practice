@@ -1,25 +1,24 @@
-class RectPattern{
+class RectPattern {
 
-    // note : this is non-static methods which required object to get execute 
-    public void hollowRectangle(int totalRows, int totalColumn){
+    // note : this is non-static methods which required object to get execute
+    public void hollowRectangle(int totalRows, int totalColumn) {
         /*
-         *       ********
-         *       *      *
-         *       *      *
-         *       ********  
+         * ********
+         * * *
+         * * *
+         * ********
          */
-         System.out.println();
+        System.out.println();
 
-         System.out.println("Hollow Rectangle");
-         System.out.println();
-         
+        System.out.println("Hollow Rectangle");
+        System.out.println();
 
-        for(int i = 1;  i <= totalRows ; i++){
-            for(int j = 1; j <= totalColumn ; j++){
+        for (int i = 1; i <= totalRows; i++) {
+            for (int j = 1; j <= totalColumn; j++) {
 
-                if(i == 1 || i == totalRows || j == 1 || j == totalColumn){
+                if (i == 1 || i == totalRows || j == 1 || j == totalColumn) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
 
@@ -32,7 +31,7 @@ class RectPattern{
     }
 
     // note : this is non static methods which directly executed using class
-    public static void invertedRotatedHalfPyramid(int starLine){
+    public static void invertedRotatedHalfPyramid(int starLine) {
 
         System.out.print("-----------------------------------------------------");
 
@@ -41,31 +40,30 @@ class RectPattern{
         System.out.println("Inverted Rotated Half Pyramid");
         System.out.println();
 
-        /*   
-         *        *
-         *       **   
-         *      ***
-         *     ****
-         *    *****
+        /*
+         * *
+         * **
+         * ***
+         * ****
+         * *****
          */
 
-         for(int i=1 ; i <= starLine ; i++){
-            for(int j=0 ; j<= starLine; j++){
-                
-                if(j <= starLine-i){
+        for (int i = 1; i <= starLine; i++) {
+            for (int j = 0; j <= starLine; j++) {
+
+                if (j <= starLine - i) {
                     System.out.print(" ");
-                }else{
+                } else {
                     System.out.print("*");
                 }
-               
+
             }
             System.out.println();
-         }
+        }
 
     }
 
-
-    public static void invertedHalfNumberPyramid(int length){
+    public static void invertedHalfNumberPyramid(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -73,25 +71,24 @@ class RectPattern{
         System.out.println("Inverted Half Number Pyramid");
         System.out.println();
 
-
-        /*     
-         *     12345
-         *     1234 
-         *     123
-         *     12
-         *     1
+        /*
+         * 12345
+         * 1234
+         * 123
+         * 12
+         * 1
          */
 
-         for(int i=length; i > 0; i--){
-            for(int j = 1; j<= i; j++){
+        for (int i = length; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
             System.out.println();
-         }
+        }
 
     }
 
-    public static void floydTriangle(int length){
+    public static void floydTriangle(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -99,29 +96,27 @@ class RectPattern{
         System.out.println("Floyd's Traingle");
         System.out.println();
 
-
-        /*     
-         *     01
-         *     02 03 
-         *     04 05 06
-         *     07 08 09 10
-         *     11 12 13 14 15
+        /*
+         * 01
+         * 02 03
+         * 04 05 06
+         * 07 08 09 10
+         * 11 12 13 14 15
          */
 
-         int l = 1;
-         for(int i= 1; i <= length; i++){
-            for(int j = 1 ; j <= i ; j++){
-                
+        int l = 1;
+        for (int i = 1; i <= length; i++) {
+            for (int j = 1; j <= i; j++) {
+
                 System.out.print(l);
                 l++;
             }
             System.out.println("");
-         }
-
+        }
 
     }
 
-    public static void binaryTriangle(int length){
+    public static void binaryTriangle(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -129,47 +124,42 @@ class RectPattern{
         System.out.println("Binary Traingle");
         System.out.println();
 
-
-        /*     1
-         *     0 1
-         *     1 0 1
-         *     0 1 0 1
-         *     1 0 1 0 1
-         *     0 1 0 1 0 1
+        /*
+         * 1
+         * 0 1
+         * 1 0 1
+         * 0 1 0 1
+         * 1 0 1 0 1
+         * 0 1 0 1 0 1
          */
 
-         int binaryCounter = 1;
-         for(int i=1 ; i<= length; i++){
-            for(int j=1 ; j <= i; j++){
-                   
+        int binaryCounter = 1;
+        for (int i = 1; i <= length; i++) {
+            for (int j = 1; j <= i; j++) {
 
-                // System.out.print(binaryCounter); 
+                // System.out.print(binaryCounter);
 
                 // if(binaryCounter == 1 ){
-                //     binaryCounter = 0;
+                // binaryCounter = 0;
                 // }else{
-                //     binaryCounter = 1;                   
+                // binaryCounter = 1;
                 // }
 
-
                 // other Approach is of Even and odd
-                if( (i+j) % 2 == 0  ){
-                    System.out.print("1"); 
-                }else{
-                    System.out.print("0"); 
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1");
+                } else {
+                    System.out.print("0");
 
                 }
 
-               
             }
             System.out.println("");
-         }
-       
-
+        }
 
     }
 
-    public static void butterflyPattern(int length){
+    public static void butterflyPattern(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -177,68 +167,63 @@ class RectPattern{
         System.out.println("Butterfly Pattern");
         System.out.println();
 
-
-        /*   
-         *   *      *
-         *   **    **
-         *   ***  ***
-         *   ********
-         *   ********
-         *   ***  ***
-         *   **    **
-         *   *      *
-         *   
+        /*
+         * * *
+         * ** **
+         * *** ***
+         * ********
+         * ********
+         * *** ***
+         * ** **
+         * * *
          * 
-         * first half 
+         * 
+         * first half
          * row : 4
          * column : 8 (4*2)
          * 
          * 
          */
 
+        // ist half
 
-         // ist half
-   
-         for(int i = 1; i <= length ; i++){
-            
+        for (int i = 1; i <= length; i++) {
+
             // star print
-            for(int j=1 ; j<= i; j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
 
             // gap print
-            for(int j=1 ; j <= 2*(length-i) ; j++){
+            for (int j = 1; j <= 2 * (length - i); j++) {
                 System.out.print(" ");
             }
 
             // star print
-            for(int j=1 ; j<= i; j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-            System.out.println(""); 
-         }
+            System.out.println("");
+        }
 
+        // 2nd half
 
-         // 2nd half
-       
-         for(int i = length; i > 0 ; i--){
-            for(int j=1 ; j<= i; j++){
+        for (int i = length; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-            for(int j=1 ; j <= 2*(length-i) ; j++){
+            for (int j = 1; j <= 2 * (length - i); j++) {
                 System.out.print(" ");
             }
-            for(int j=1 ; j<= i; j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-            System.out.println(""); 
-         }
-
-
+            System.out.println("");
+        }
 
     }
 
-    public static void diamondPattern(int length){
+    public static void diamondPattern(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -246,111 +231,61 @@ class RectPattern{
         System.out.println("Diamond Pattern");
         System.out.println();
 
-
-        /*   
-         *                  *
-         *                 ***
-         *                *****
-         *               *******
-         *              *********
-         *              *********
-         *               *******
-         *                *****
-         *                 ***
-         *                  *
-         *   
+        /*
+         * *
+         * ***
+         * *****
+         * *******
+         * *********
+         * *********
+         * *******
+         * *****
+         * ***
+         * *
          * 
-         * first half 
+         * 
+         * first half
          * row : 4
          * column : 8 (4*2)
          * 
          * 
          */
 
+        // 1st half
+        for (int i = 1; i <= length; i++) {
 
-
-         // 1st half
-         for(int i=1; i<= length ; i++){
-            
-          
             // starting gap
-            for(int j=length - i; j > 0; j--){
-                System.out.print(" "); 
-            }
-
-            // print star
-            for(int j =1; j<= ((2*i) - 1); j++){
-                System.out.print("*");
-            }
-
-          
-
-            System.out.println("");
-         }
-
-
-          // 2nd half
-         for(int i=length; i>0 ; i--){
-            
-          
-            // starting gap
-            for(int j=length - i; j > 0; j--){
-                System.out.print(" "); 
-            }
-
-            // print star
-            for(int j =1; j<= ((2*i) - 1); j++){
-                System.out.print("*");
-            }
-
-         
-
-            System.out.println("");
-         }
-
-
-
-    }
-
-    public static void numberPyramid(int length){
-        System.out.print("-----------------------------------------------------");
-
-        System.out.println("\n");
-
-        System.out.println("Number Pyramid Pattern");
-        System.out.println();
-
-
-        /*   
-         *                1
-         *               2 2
-         *              3 3 3
-         *             4 4 4 4 
-         *            5 5 5 5 5 
-         *           6 6 6 6 6 6
-         *   
-         */
-
-
-       
-
-         for(int i = 1; i <=length ; i++){
-
-            // gaps
-            for(int j = 1; j <= length-i; j++){
+            for (int j = length - i; j > 0; j--) {
                 System.out.print(" ");
             }
 
-            // print value
-            for(int j=1 ; j <= i; j++){
-                System.out.print(i+" ");
+            // print star
+            for (int j = 1; j <= ((2 * i) - 1); j++) {
+                System.out.print("*");
             }
+
+            System.out.println("");
+        }
+
+        // 2nd half
+        for (int i = length; i > 0; i--) {
+
+            // starting gap
+            for (int j = length - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+
+            // print star
+            for (int j = 1; j <= ((2 * i) - 1); j++) {
+                System.out.print("*");
+            }
+
             System.out.println("");
         }
 
     }
 
-    public static void numberPalindromeyramid(int length){
+    public static void numberPyramid(int length) {
         System.out.print("-----------------------------------------------------");
 
         System.out.println("\n");
@@ -358,65 +293,95 @@ class RectPattern{
         System.out.println("Number Pyramid Pattern");
         System.out.println();
 
-
-        /*   
-         *
-         *          1
-         *        2 1 2
-         *      3 2 1 2 3 
-         *    4 3 2 1 2 3 4
-         *  5 4 3 2 1 2 3 4 5
+        /*
+         * 1
+         * 2 2
+         * 3 3 3
+         * 4 4 4 4
+         * 5 5 5 5 5
+         * 6 6 6 6 6 6
          * 
          */
 
-
-         for(int i = 1; i <=length ; i++){
+        for (int i = 1; i <= length; i++) {
 
             // gaps
-            for(int j = 1; j <= length-i; j++){
+            for (int j = 1; j <= length - i; j++) {
                 System.out.print(" ");
             }
 
             // print value
-            for(int j=i ; j >0; j--){
-                System.out.print(j);
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i + " ");
             }
-
-            if(i >= 2){
-                for(int j=2 ; j <=i ; j++){
-                    System.out.print(j);
-                }
-            }
-           
-            
             System.out.println("");
         }
 
     }
 
+    public static void numberPalindromeyramid(int length) {
+        System.out.print("-----------------------------------------------------");
 
-    public static void main(String[] args ){
+        System.out.println("\n");
 
-            // non static methods calling
-            RectPattern rp = new RectPattern();
-            rp.hollowRectangle(4,5);
+        System.out.println("Number Pyramid Pattern");
+        System.out.println();
 
-            // static methods calling
-            invertedRotatedHalfPyramid(5);
+        /*
+         *
+         * 1
+         * 2 1 2
+         * 3 2 1 2 3
+         * 4 3 2 1 2 3 4
+         * 5 4 3 2 1 2 3 4 5
+         * 
+         */
 
-            invertedHalfNumberPyramid(5);
+        for (int i = 1; i <= length; i++) {
 
-            floydTriangle(5);
+            // gaps
+            for (int j = 1; j <= length - i; j++) {
+                System.out.print(" ");
+            }
 
-            binaryTriangle(8);
+            // print value
+            for (int j = i; j > 0; j--) {
+                System.out.print(j);
+            }
 
-            butterflyPattern(4);
+            if (i >= 2) {
+                for (int j = 2; j <= i; j++) {
+                    System.out.print(j);
+                }
+            }
 
-            diamondPattern(4);
+            System.out.println("");
+        }
 
-            numberPyramid(5);
+    }
 
-            numberPalindromeyramid(5);
+    public static void main(String[] args) {
+
+        // non static methods calling
+        RectPattern rp = new RectPattern();
+        rp.hollowRectangle(4, 5);
+
+        // static methods calling
+        invertedRotatedHalfPyramid(5);
+
+        invertedHalfNumberPyramid(5);
+
+        floydTriangle(5);
+
+        binaryTriangle(8);
+
+        butterflyPattern(4);
+
+        diamondPattern(4);
+
+        numberPyramid(5);
+
+        numberPalindromeyramid(5);
 
     }
 }
