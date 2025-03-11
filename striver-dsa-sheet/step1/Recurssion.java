@@ -32,9 +32,20 @@ public class Recurssion {
         if (i <= last) {
             sum += i;
             return sumOfN(i + 1, last, sum);
-
         }
         return sum;
+    }
+
+    public int factorial(int num, int factorial) {
+
+        if (num >= 1) {
+            // System.out.println(factorial);
+            factorial = factorial * num;
+
+            return factorial(num - 1, factorial);
+        }
+
+        return factorial;
     }
 
     public static void main(String[] args) {
@@ -48,6 +59,8 @@ public class Recurssion {
         rc.printLastToFirst(10, 1);
 
         System.out.println("sum = " + rc.sumOfN(1, 10, 0));
+
+        System.out.println("Factorial = " + rc.factorial(3, 1));
 
     }
 }
