@@ -84,6 +84,17 @@ public class BasicMaths {
         return arr;
     }
 
+    public boolean checkPrime(int num) {
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
 
         Scanner scn = new Scanner(System.in);
@@ -111,6 +122,8 @@ public class BasicMaths {
         System.out.println(" GCD = " + bm.findGcd(18, 12));
 
         System.out.println(" Divisor List =  " + bm.findDivisor(36));
+
+        System.out.println(" Entered Value  " + val1 + " is Prime : " + bm.checkPrime(Integer.parseInt(val1)));
 
     }
 }
