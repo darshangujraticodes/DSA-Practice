@@ -127,6 +127,88 @@ public class StarPatterns {
         System.out.println("");
     }
 
+    public static void binaryTraingle(int n) {
+        System.out.println("Binary Traingle Patterns");
+        // System.out.println();
+        int count = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(count);
+                if (count == 1) {
+                    count = 0;
+                } else {
+                    count = 1;
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("");
+    }
+
+    public static void trainglePattern(int n) {
+        System.out.println("Traingle Patterns");
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n - i) + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("");
+
+        // System.out.println("");
+
+        // for (int i = n; i >= 1; i--) {
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+        // System.out.println("");
+    }
+
+    public static void butterflyPattern(int n) {
+        System.out.println("Butterfly Patterns");
+        System.out.println();
+
+        // upper half
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // lower half
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println("");
+
+    }
+
     public static void main(String[] args) {
         squarePattern(5);
         rightHalfTraingle(6);
@@ -137,5 +219,8 @@ public class StarPatterns {
         invertRotatedHalfPyramid(5);
         invertedNumberHalfPyramid(5);
         floydTraingle(4);
+        binaryTraingle(5);
+        trainglePattern(5);
+        butterflyPattern(8);
     }
 }
